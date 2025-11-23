@@ -1,4 +1,4 @@
-# Natural Language Architecture Templates
+# Natural Language Architecture Templates v1.0
 
 Templates for designing complex and OS-level systems using natural language as the architecture medium.
 
