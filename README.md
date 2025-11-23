@@ -101,6 +101,7 @@ But they are also precise enough to be handed to engineering teams as a starting
    ├─ Digital_Nomad_Helper_OS.md
    ├─ Office_Workflow_Assistant_OS.md
    └─ Personal_Learning_OS.md
+```
 4.1 templates/
 OS_Architecture_Canvas.md
 High-level canvas for designing OS-level or large-scale systems.
