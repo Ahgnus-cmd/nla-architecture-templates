@@ -103,237 +103,252 @@ But they are also precise enough to be handed to engineering teams as a starting
    └─ Personal_Learning_OS.md
 ```
 
-## 4.1 templates/
+### 4.1 templates/
 
-OS_Architecture_Canvas.md
-High-level canvas for designing OS-level or large-scale systems.
+#### OS_Architecture_Canvas.md
 
-Think in layers (interface, context, core logic, memory, governance, execution).
+High-level canvas for designing **OS-level or large-scale systems.**
 
-Map data/knowledge flows and control flows separately.
+- Think in **layers** (interface, context, core logic, memory, governance, execution).
 
-Make feedback loops and safety mechanisms explicit.
+- Map **data/knowledge flows** and **control flows** separately.
 
-Designed to be:
+- Make **feedback loops** and **safety mechanisms** explicit.
 
-readable as a document,
+- Designed to be:
 
-convertible into diagrams later,
+   - readable as a document,
 
-and stable enough to survive versioning.
+   - convertible into diagrams later,
 
-System_Flow_Template.md
-Template for a single feature, workflow, or pipeline inside a larger system.
+   - stable enough to survive versioning.
 
-Define inputs / outputs clearly (even if only in words).
+#### System_Flow_Template.md
 
-Describe the flow step-by-step, including edge cases and failure modes.
+Template for a **single feature, workflow, or pipeline** inside a larger system.
 
-Link each step to the OS layers/modules that participate.
+- Define **inputs / outputs** clearly (even if only in words).
 
-Add metrics & feedback signals so you can evaluate and improve the flow.
+- Describe the flow **step-by-step**, including edge cases and failure modes.
 
-Governance_Checklist.md
-A practical governance & risk checklist for any NLA-based system or flow.
+- Link each step to the **OS layers/modules** that participate.
 
-Ownership & responsibility
+- Add **metrics & feedback signals** so you can evaluate and improve the flow.
 
-Scope & impact
+#### Governance_Checklist.md
 
-Safety & misuse scenarios
+A practical **governance & risk checklist** for any NLA-based system or flow.
 
-Data & privacy
+- Ownership & responsibility
 
-Transparency & traceability
+- Scope & impact
 
-Maintenance & evolution
+- Safety & misuse scenarios
 
-Alignment with original intent
+- Data & privacy
 
-Communication with stakeholders and users
+- Transparency & traceability
+
+- Maintenance & evolution
+
+- Alignment with original intent
+
+- Communication with stakeholders and users
 
 The goal is simple:
 
-If you designed a system with NLA, you should be able to review it with this checklist
-before calling it “production-ready”.
+    If you designed a system with NLA, you should be able to review it with this checklist
+    before calling it “production-ready”.
 
 ### 4.2 examples/
 
-These are fully written example architectures that show how to use the templates in realistic scenarios.
+These are **fully written example architectures** that show how to use the templates in realistic scenarios.
 
 They’re not finished products;
-they are reference NLA documents.
+they are **reference NLA documents.**
 
-Digital_Nomad_Helper_OS.md
+#### Digital_Nomad_Helper_OS.md
+
 OS-level architecture for a relocation assistant that helps remote workers:
 
-compare countries (visa, tax, cost of living, safety),
+- compare countries (visa, tax, cost of living, safety),
 
-and turn decisions into guided plans and checklists.
+- turn decisions into **guided plans and checklists.**
 
-Office_Workflow_Assistant_OS.md
+#### Office_Workflow_Assistant_OS.md
+
 OS for knowledge workers that connects:
 
-email, meetings, documents, and tasks
+- email, meetings, documents, and tasks
 
-into a unified daily/weekly planning and execution flow.
+- into a unified **daily/weekly planning and execution flow.**
 
-Personal_Learning_OS.md
+#### Personal_Learning_OS.md
+
 Learning OS that turns high-level goals into:
 
-skill maps, milestones, weekly plans,
+- skill maps, milestones, weekly plans
 
-daily learning sessions,
+- daily learning sessions
 
-adaptation based on progress and well-being.
+- adaptation based on progress and well-being.
 
-These examples are written to be:
+##### These examples are written to be:
 
-generic enough to reuse for your own systems,
+- **generic enough** to reuse for your own systems,
 
-concrete enough to see how NLA looks in practice.
+- **concrete enough** to see how NLA looks in practice.
+
+---
 
 ## 5. How to use these templates
 
 You can treat this repository as a starter kit.
 
-Step 1 – Choose your starting point
+### Step 1 – Choose your starting point
 
-Designing an entire system or OS-level product?
-→ Start with OS_Architecture_Canvas.md.
+- Designing an entire system or OS-level product?
+  → Start with *OS_Architecture_Canvas.md.*
 
-Designing one feature, flow, or pipeline inside an existing system?
-→ Use System_Flow_Template.md.
+- Designing one feature, flow, or pipeline inside an existing system?
+  → Use *System_Flow_Template.md.*
 
-Reviewing risks, safety, or organisational fit?
-→ Run through Governance_Checklist.md.
+-Reviewing risks, safety, or organisational fit?
+  → Run through *Governance_Checklist.md.*
 
-Step 2 – Copy & rename
+### Step 2 – Copy & rename
 
-Copy the template into your own repo, wiki, or notes.
+- Copy the template into your own repo, wiki, or notes.
 
-Rename it to match your system or feature:
+- Rename it to match your system or feature:
 
-Payment_Risk_OS.md
+   - *Payment_Risk_OS.md*
 
-Research_Workflow_OS.md
+   - *Research_Workflow_OS.md*
 
-Support_Triage_Flow.md, etc.
+   - *Support_Triage_Flow.md,* etc.
 
-Step 3 – Fill it out in natural language
+### Step 3 – Fill it out in natural language
 
-Write as if you’re explaining the system to:
+- Write as if you’re explaining the system to:
 
-a future engineer,
+    - a future engineer,
 
-a PM,
+    - a PM,
 
-or a new team member.
+    - a new team member.
 
-Don’t worry about diagrams or code yet.
+- Don’t worry about diagrams or code yet.
 
-Use the examples in examples/ as a reference for depth and tone.
+- Use the examples in examples/ as a reference for **depth and tone.**
 
-Step 4 – Iterate with your tools
+### Step 4 – Iterate with your tools
 
-Use LLMs or collaborators to:
+- Use LLMs or collaborators to:
 
-refine layers,
+   - refine layers,
 
-stress-test failure modes,
+   - stress-test failure modes,
 
-check for missing governance pieces.
+   - check for missing governance pieces.
 
-Keep architecture (intent) and implementation (code/tools) separate documents.
+- Keep **architecture (intent)** and **implementation (code/tools)** separate documents.
 
-Step 5 – Revisit with the Governance Checklist
+### Step 5 – Revisit with the Governance Checklist
 
 Before you treat an architecture as “stable” or “prod-ready”:
 
-Open Governance_Checklist.md.
+- Open *Governance_Checklist.md.*
 
-Walk through it line by line against your system.
+- Walk through it line by line against your system.
 
-Adjust your architecture where necessary.
+- Adjust your architecture where necessary.
+
+---
 
 ## 6. Design principles behind v1.0
 
 This template set follows a few design principles:
 
-Language-first, diagrams second
+### Language-first, diagrams second
 The architecture must make sense when read as text, without any diagram.
 
-System-first mindset
+### System-first mindset
 Design layers, flows, and feedback loops – not isolated prompts or functions.
 
-Governance baked in
-Risk, safety, data, and ownership are treated as architecture concerns,
-not an afterthought.
+### Governance baked in
+Risk, safety, data, and ownership are treated as architecture concerns, not an afterthought.
 
-Tool-agnostic
+### Tool-agnostic
 These templates do not assume one vendor, model, or framework.
 
-Minimal but extensible
-Three core templates + examples that can be:
+### Minimal but extensible
 
-adapted to different domains (productivity, finance, education, ops, etc.),
+- Three core templates + examples that can be:
 
-extended with domain-specific sections in your own forks.
+- adapted to different domains (productivity, finance, education, ops, etc.),
+
+- extended with domain-specific sections in your own forks.
+
+--- 
 
 ## 7. Versioning
 
 This repository uses a simple semantic-style versioning for the templates as a set.
 
-v1.0.0 – First stable release:
+- v1.0.0 – First stable release:
 
-OS Architecture Canvas
+   - OS Architecture Canvas
 
-System Flow Template
+   - System Flow Template
 
-Governance Checklist
+   - Governance Checklist
 
 3 example OS designs
 
-The scope of v1.0 is intentionally restricted to general-purpose NLA templates.
-More specialised patterns (e.g. domain-specific OS templates, advanced AI-native patterns)
-are kept in separate, private or domain-specific spaces.
+The scope of v1.0 is intentionally restricted to **general-purpose NLA templates.*
+More specialised patterns (e.g. domain-specific OS templates, advanced AI-native patterns) are kept in separate, private or domain-specific spaces.
+
+---
 
 ## 8. Roadmap (non-binding)
 
 Potential directions for future versions:
 
-More example architectures in:
+**More example architectures in:**
 
-health,
+- health,
 
-fintech,
+- fintech,
 
-research tooling,
+- research tooling,
 
-operations and logistics.
+- operations and logistics.
 
-Additional templates for:
+**Additional templates for:**
 
-evaluation & testing plans,
+- evaluation & testing plans,
 
-dataset / knowledge base design,
+- dataset / knowledge base design,
 
-AI-assisted product discovery workshops.
+- AI-assisted product discovery workshops.
 
-Optional “diagram recipes” that map directly from the OS canvas to:
+**Optional “diagram recipes” that map directly from the OS canvas to:**
 
-C4-style diagrams,
+- C4-style diagrams,
 
-service maps,
+- service maps,
 
-governance maps.
+- governance maps.
 
 If you experiment with these templates and discover useful patterns,
 you’re welcome to open an issue or share your experience.
 
+---
+
 ## 9. License
 
-This project is licensed under the Apache License, Version 2.0.
+This project is licensed under the **Apache icense, Version 2.0.**
 
 You may not use this project except in compliance with the License.
 You may obtain a copy of the License at:
@@ -347,8 +362,8 @@ governing permissions and limitations under the License.
 
 ## 10. Author
 
-Name: Ahgnus
+**Name:** Ahgnus
 
-GitHub: @Ahgnus-cmd
+**GitHub:** @Ahgnus-cmd
 
 For questions, feedback, or collaboration, feel free to reach out via GitHub.
