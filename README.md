@@ -102,6 +102,7 @@ But they are also precise enough to be handed to engineering teams as a starting
    ├─ Office_Workflow_Assistant_OS.md
    └─ Personal_Learning_OS.md
 ```
+
 4.1 templates/
 
 OS_Architecture_Canvas.md
