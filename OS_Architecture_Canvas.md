@@ -1,20 +1,20 @@
 # OS / System Architecture Canvas
 
 > Use this canvas to design an OS-level or large-scale system using natural language only.
-> Think in layers, flows, interfaces, and feedback loops before any code exists.
+> Focus on layers, flows, interfaces, feedback loops, and governance before any code exists.
 
 ---
 
-## 1. Overview
+## 1. System Overview
 
 - **System name**:
 - **One-line description**:
 - **Primary purpose / mission**:
-- **Target users**:
-- **Core domain(s)**:
-- **Scope (v0.1)**:
-  - What this architecture *includes*:
-  - What this architecture *excludes*:
+- **Target users / stakeholders**:
+- **Core domains** (e.g. finance, productivity, education):
+- **Scope (v1.0)**:
+  - In scope:
+  - Out of scope:
 
 ---
 
@@ -22,27 +22,30 @@
 
 - **What problem does this system solve?**
 - **Why does it need an OS-level / multi-layer structure?**
-- **Key constraints** (technical, legal, organizational, etc.):
-- **Assumptions**:
+- **Key constraints** (technical, legal, organizational, UX, etc.):
+- **Assumptions** (what you treat as true for this design):
 
 ---
 
 ## 3. Layer Stack (Language-First)
 
 Describe your system as a stack of layers.  
-You can think in terms like: Input, Core Reasoning, Memory, Governance, Execution, Interface, etc.
+Think in terms like: Interface, Context, Core Logic, Memory, Governance, Execution, etc.
 
-| Layer ID | Layer Name        | Role in the system                           | Main inputs                    | Main outputs                    |
-|---------:|-------------------|----------------------------------------------|--------------------------------|---------------------------------|
-| L1       |                   |                                              |                                |                                 |
-| L2       |                   |                                              |                                |                                 |
-| L3       |                   |                                              |                                |                                 |
-| L4       |                   |                                              |                                |                                 |
-| L5       |                   |                                              |                                |                                 |
+| Layer ID | Layer name                | Role in the system                                             | Main inputs                             | Main outputs                              |
+|---------:|---------------------------|-----------------------------------------------------------------|-----------------------------------------|-------------------------------------------|
+| L1       |                           |                                                                 |                                         |                                           |
+| L2       |                           |                                                                 |                                         |                                           |
+| L3       |                           |                                                                 |                                         |                                           |
+| L4       |                           |                                                                 |                                         |                                           |
+| L5       |                           |                                                                 |                                         |                                           |
+| L6       |                           |                                                                 |                                         |                                           |
+| L7       |                           |                                                                 |                                         |                                           |
 
 - **Notes on layering**:
-  - Why this number of layers?
-  - Any layers that might merge/split in future versions?
+  - Why this set of layers?
+  - Which layers are essential for v1.0?
+  - Which layers might be merged/split in future versions?
 
 ---
 
@@ -50,27 +53,29 @@ You can think in terms like: Input, Core Reasoning, Memory, Governance, Executio
 
 ### 4.1 Data / Knowledge Flow
 
-- **Main data sources**:
+- **Main data sources** (internal + external):
 - **How information moves between layers**:
-- **Where knowledge is stored / updated**:
-
-### 4.2 Control / Orchestration Flow
-
-- **Who makes decisions? (which layer)**
-- **How requests move through the system**:
-- **Where feedback loops exist**:
+- **Where knowledge is stored / updated** (short description):
 
 You may use a simple text diagram, for example:
 
-`User → Interface Layer → Orchestration Layer → Core Layer(s) → Memory → Interface Layer → User`
+`User → Interface Layer → Orchestration Layer → Core Logic → Memory → Interface Layer → User`
+
+### 4.2 Control / Orchestration Flow
+
+- **Where are key decisions made?** (which layers)
+- **How a typical request moves through the system**:
+- **What triggers feedback loops or re-computation?**
 
 ---
 
-## 5. Feedback Loops & Adaptation
+## 5. Feedback & Adaptation
 
 - **Where does the system learn or adapt?**
-- **Which signals trigger updates?** (metrics, feedback, failures)
-- **What cannot be changed automatically?** (governance guards)
+  - Signals used (metrics, feedback, failures, environment changes):
+  - Which layers adjust behaviour based on these signals:
+- **What is allowed to adapt automatically?**
+- **What must be reviewed or approved by humans?**
 
 ---
 
@@ -78,49 +83,63 @@ You may use a simple text diagram, for example:
 
 ### 6.1 External Interfaces
 
-- **Interfaces to users** (UI, API, CLI, chat, etc.):
-- **Interfaces to other systems** (APIs, events, webhooks, DBs):
+- **Interfaces to users**:
+  - UI types (web, mobile, chat, CLI, other):
+  - Main user journeys:
+
+- **Interfaces to other systems**:
+  - APIs, events, webhooks, data exports:
+  - Key integration partners or platforms:
 
 ### 6.2 Internal Interfaces
 
-- How do layers talk to each other?
-  - Sync vs async
-  - Contracts or schemas (even if only described in language)
+- **How do layers talk to each other?**
+  - Sync vs async interactions:
+  - Any named internal services/modules (even if conceptual only):
+- **Schemas / contracts (language-level)**:
+  - Important objects (e.g. UserProfile, Task, Plan, Recommendation):
+  - What each object must contain:
 
 ---
 
-## 7. Safety, Governance, and Audit
+## 7. Safety, Governance, and Risk
 
-- **Risks this system can create** (technical, ethical, financial, etc.):
+- **Main risks** (technical, ethical, financial, operational):
 - **Safety mechanisms**:
   - Hard limits:
   - Soft limits:
-  - Manual overrides:
+  - Manual override process:
 
-- **Governance decisions**:
-  - Who is allowed to change what?
-  - How are changes reviewed?
-  - Logging / traceability requirements:
+- **Governance**:
+  - Who can change system behaviour or configuration?
+  - Change review process (if any):
+  - Logging / audit requirements:
 
 ---
 
 ## 8. Implementation Notes (Optional)
 
-- **Planned tools / platforms** (LLMs, frameworks, languages) – optional:
+- **Preferred tools / platforms** (LLMs, frameworks, languages, infra):
 - **MVP constraints**:
-  - What will be intentionally left out in v0.1 for simplicity?
+  - What will be deliberately left out in v1.0?
+  - What shortcuts are acceptable for early versions?
 
 ---
 
 ## 9. Test & Evaluation Scenarios
 
-List 5–10 simple scenarios to test whether this architecture works:
+Define 5–10 simple scenarios that the system should handle.
 
-1. Happy-path scenario:
-2. Edge-case scenario:
-3. Failure / recovery scenario:
-4. Misuse / abuse scenario:
-5. Scaling scenario:
+1. **Happy path**:
+2. **Edge case**:
+3. **Failure / recovery**:
+4. **Misuse / abuse**:
+5. **Scaling / load**:
+
+Add more if necessary:
+
+6.  
+7.  
 
 ---
 
@@ -128,5 +147,5 @@ List 5–10 simple scenarios to test whether this architecture works:
 
 - Potential new layers:
 - Potential new feedback loops:
-- Integrations you want to add later:
-
+- Future integrations:
+- Long-term vision beyond v1.0:
