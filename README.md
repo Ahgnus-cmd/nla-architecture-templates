@@ -103,7 +103,7 @@ But they are also precise enough to be handed to engineering teams as a starting
    └─ Personal_Learning_OS.md
 ```
 
-4.1 templates/
+## 4.1 templates/
 
 OS_Architecture_Canvas.md
 High-level canvas for designing OS-level or large-scale systems.
@@ -157,7 +157,7 @@ The goal is simple:
 If you designed a system with NLA, you should be able to review it with this checklist
 before calling it “production-ready”.
 
-4.2 examples/
+### 4.2 examples/
 
 These are fully written example architectures that show how to use the templates in realistic scenarios.
 
@@ -193,7 +193,7 @@ generic enough to reuse for your own systems,
 
 concrete enough to see how NLA looks in practice.
 
-5. How to use these templates
+## 5. How to use these templates
 
 You can treat this repository as a starter kit.
 
@@ -256,7 +256,7 @@ Walk through it line by line against your system.
 
 Adjust your architecture where necessary.
 
-6. Design principles behind v1.0
+## 6. Design principles behind v1.0
 
 This template set follows a few design principles:
 
@@ -280,7 +280,7 @@ adapted to different domains (productivity, finance, education, ops, etc.),
 
 extended with domain-specific sections in your own forks.
 
-7. Versioning
+## 7. Versioning
 
 This repository uses a simple semantic-style versioning for the templates as a set.
 
@@ -298,7 +298,7 @@ The scope of v1.0 is intentionally restricted to general-purpose NLA templates.
 More specialised patterns (e.g. domain-specific OS templates, advanced AI-native patterns)
 are kept in separate, private or domain-specific spaces.
 
-8. Roadmap (non-binding)
+## 8. Roadmap (non-binding)
 
 Potential directions for future versions:
 
@@ -331,7 +331,7 @@ governance maps.
 If you experiment with these templates and discover useful patterns,
 you’re welcome to open an issue or share your experience.
 
-9. License
+## 9. License
 
 This project is licensed under the Apache License, Version 2.0.
 
@@ -345,7 +345,7 @@ distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
 either express or implied. See the LICENSE file for the specific language
 governing permissions and limitations under the License.
 
-10. Author
+## 10. Author
 
 Name: Ahgnus
 
