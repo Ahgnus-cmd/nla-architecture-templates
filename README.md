@@ -103,6 +103,7 @@ But they are also precise enough to be handed to engineering teams as a starting
    └─ Personal_Learning_OS.md
 ```
 4.1 templates/
+
 OS_Architecture_Canvas.md
 High-level canvas for designing OS-level or large-scale systems.
 
@@ -156,6 +157,7 @@ If you designed a system with NLA, you should be able to review it with this che
 before calling it “production-ready”.
 
 4.2 examples/
+
 These are fully written example architectures that show how to use the templates in realistic scenarios.
 
 They’re not finished products;
@@ -191,9 +193,11 @@ generic enough to reuse for your own systems,
 concrete enough to see how NLA looks in practice.
 
 5. How to use these templates
+
 You can treat this repository as a starter kit.
 
 Step 1 – Choose your starting point
+
 Designing an entire system or OS-level product?
 → Start with OS_Architecture_Canvas.md.
 
@@ -204,6 +208,7 @@ Reviewing risks, safety, or organisational fit?
 → Run through Governance_Checklist.md.
 
 Step 2 – Copy & rename
+
 Copy the template into your own repo, wiki, or notes.
 
 Rename it to match your system or feature:
@@ -215,6 +220,7 @@ Research_Workflow_OS.md
 Support_Triage_Flow.md, etc.
 
 Step 3 – Fill it out in natural language
+
 Write as if you’re explaining the system to:
 
 a future engineer,
@@ -228,6 +234,7 @@ Don’t worry about diagrams or code yet.
 Use the examples in examples/ as a reference for depth and tone.
 
 Step 4 – Iterate with your tools
+
 Use LLMs or collaborators to:
 
 refine layers,
@@ -239,6 +246,7 @@ check for missing governance pieces.
 Keep architecture (intent) and implementation (code/tools) separate documents.
 
 Step 5 – Revisit with the Governance Checklist
+
 Before you treat an architecture as “stable” or “prod-ready”:
 
 Open Governance_Checklist.md.
@@ -248,6 +256,7 @@ Walk through it line by line against your system.
 Adjust your architecture where necessary.
 
 6. Design principles behind v1.0
+
 This template set follows a few design principles:
 
 Language-first, diagrams second
@@ -271,6 +280,7 @@ adapted to different domains (productivity, finance, education, ops, etc.),
 extended with domain-specific sections in your own forks.
 
 7. Versioning
+
 This repository uses a simple semantic-style versioning for the templates as a set.
 
 v1.0.0 – First stable release:
@@ -288,6 +298,7 @@ More specialised patterns (e.g. domain-specific OS templates, advanced AI-native
 are kept in separate, private or domain-specific spaces.
 
 8. Roadmap (non-binding)
+
 Potential directions for future versions:
 
 More example architectures in:
@@ -320,6 +331,7 @@ If you experiment with these templates and discover useful patterns,
 you’re welcome to open an issue or share your experience.
 
 9. License
+
 This project is licensed under the Apache License, Version 2.0.
 
 You may not use this project except in compliance with the License.
@@ -333,6 +345,7 @@ either express or implied. See the LICENSE file for the specific language
 governing permissions and limitations under the License.
 
 10. Author
+
 Name: Ahgnus
 
 GitHub: @Ahgnus-cmd
